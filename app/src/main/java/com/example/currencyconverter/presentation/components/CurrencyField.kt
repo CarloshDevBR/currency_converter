@@ -21,6 +21,7 @@ import com.example.currencyconverter.presentation.theme.CurrencyConverterTheme
 @Composable
 fun CurrencyField(
     modifier: Modifier = Modifier,
+    enabled: Boolean = true,
     currencies: List<String>,
     currencyAmount: String,
     selectedCurrency: String,
@@ -44,6 +45,8 @@ fun CurrencyField(
             OutlinedTextField(
                 modifier = Modifier.weight(1f),
                 value = currencyAmount,
+                enabled = enabled,
+                maxLines = 1,
                 onValueChange = onCurrencyAmountChanged,
                 textStyle = MaterialTheme.typography.titleLarge.copy(
                     fontWeight = FontWeight.Bold,
@@ -65,6 +68,7 @@ fun CurrencyField(
                 colors = OutlinedTextFieldDefaults.colors(
                     focusedBorderColor = Color.Transparent,
                     unfocusedBorderColor = Color.Transparent,
+                    disabledBorderColor = Color.Transparent,
                     errorBorderColor = Color.Transparent
                 )
             )

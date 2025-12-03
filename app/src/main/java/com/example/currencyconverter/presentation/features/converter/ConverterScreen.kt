@@ -104,6 +104,7 @@ fun ConverterContent(
 
                     CurrencyField(
                         modifier = Modifier.padding(top = 8.dp),
+                        enabled = false,
                         currencies = formUiState.toCurrenciesList,
                         selectedCurrency = formUiState.toCurrencySelected,
                         currencyAmount = formUiState.toCurrencyAmount,
