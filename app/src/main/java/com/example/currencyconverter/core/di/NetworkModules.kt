@@ -24,7 +24,7 @@ object NetworkModules {
     fun provideHttpClient(): HttpClient = HttpClient {
         expectSuccess = true
         defaultRequest {
-            url("https://v6.exchangerate-api.com/v6/d6e76c23a14311775c73ffa1/")
+            url("${BuildConfig.BASE_URL}${BuildConfig.API_KEY}/")
         }
         install(ContentNegotiation) {
             json(
